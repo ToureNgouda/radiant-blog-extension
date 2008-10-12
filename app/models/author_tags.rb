@@ -59,7 +59,7 @@ module AuthorTags
       rating = tag.attr['rating']
       default = tag.attr['default']
       md5 = Digest::MD5.hexdigest(author.email)
-      returning "http://www.gravatar.com/#{md5}" do |url|
+      returning "http://www.gravatar.com/avatar/#{md5}" do |url|
         url << ".#{format.downcase}" if format
         if size || rating || default
           attrs = []
